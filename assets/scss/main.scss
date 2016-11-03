@@ -4,6 +4,12 @@
 
 $primary_font: 'Inconsolata', monospace;
 $heading_font: 'Fredericka the Great', cursive;
+$hello_font: 'Noto Serif', serif;
+/*
+@font-face {
+    font-family: "Mark Words";
+    src: url('../fonts/mark_my_words.ttf') format("truetype");
+} */
 
 html,body{
 	/* -webkit-font-smoothing: antialiased;
@@ -13,7 +19,6 @@ html,body{
 	margin: 0 auto;
 	padding: 0;
 	width: 100%;
-	max-width: 1680px;
 	//height: 100%;
 	font-family:$primary_font;
 	font-size: 1em;
@@ -31,6 +36,8 @@ html{
 			-ms-transition: all .5s ease-in-out;
 			transition: all .5s ease-in-out;
 }
+
+body{max-width: 1680px;}
 
 header{
 	width: 100%;
@@ -54,6 +61,19 @@ section{
 a{
 	text-decoration: none;
 	color: black;
+}
+
+#hello{
+	h1{
+
+    margin: 0;
+    top: 5%;
+    left: 8%;
+    position: fixed;
+    font-size: 10em;
+		font-family: $hello_font;
+		font-weight: normal;
+	}
 }
 
 #menu{
@@ -440,7 +460,7 @@ font-weight: bold;
 .gridlines {
     height: 100%;
 		position: absolute !important;
-		background-color: #F1F1F1;
+		background-color: #eeeeee;
 		opacity: 0.65;
 		width: 1px;
 }
@@ -448,7 +468,7 @@ font-weight: bold;
 .horizons {
     width: 100%;
 		position: absolute !important;
-		background-color: #F1F1F1;
+		background-color: #eeeeee;
 		opacity: 0.65;
 		height: 1px;
 }

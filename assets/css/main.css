@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Noto+Serif");
+/*
+@font-face {
+    font-family: "Mark Words";
+    src: url('../fonts/mark_my_words.ttf') format("truetype");
+} */
 html, body {
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -7,7 +12,6 @@ html, body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  max-width: 1680px;
   font-family: "Inconsolata", monospace;
   font-size: 1em;
   background: transparent; }
@@ -22,6 +26,9 @@ html {
   -o-transition: all .5s ease-in-out;
   -ms-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
+
+body {
+  max-width: 1680px; }
 
 header {
   width: 100%;
@@ -42,6 +49,15 @@ section {
 a {
   text-decoration: none;
   color: black; }
+
+#hello h1 {
+  margin: 0;
+  top: 5%;
+  left: 8%;
+  position: fixed;
+  font-size: 10em;
+  font-family: "Noto Serif", serif;
+  font-weight: normal; }
 
 #menu {
   position: fixed; }
@@ -364,14 +380,14 @@ a {
 .gridlines {
   height: 100%;
   position: absolute !important;
-  background-color: #F1F1F1;
+  background-color: #eeeeee;
   opacity: 0.65;
   width: 1px; }
 
 .horizons {
   width: 100%;
   position: absolute !important;
-  background-color: #F1F1F1;
+  background-color: #eeeeee;
   opacity: 0.65;
   height: 1px; }
 
