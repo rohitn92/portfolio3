@@ -1,0 +1,25 @@
+{
+  "name": "portfolio3",
+  "version": "1.0.0",
+  "description": "My Portfolio Landing Page",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitn92/portfolio3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohitn92/portfolio3/issues"
+  },
+  "homepage": "https://github.com/rohitn92/portfolio3/index.html",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}

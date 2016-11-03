@@ -1,0 +1,35 @@
+console.log(st + " and " + lastScrollTop);
+
+   $('html, body').animate({
+       scrollTop: two.offset().top
+   }, 1000);
+
+   var lastScrollTop = 0;
+   var two= $("#skills");
+   var one= $("#about");
+   var st=0;
+   $(window).scroll(function(event){
+
+    st = $(this).scrollTop();
+    console.log(st + "SCROLL" +  $(this).scrollTop());
+
+     if (st > lastScrollTop){
+
+         $(".hori-third").css("width", "0%");
+         $("#about").removeClass("fadeInUp");
+         $("#about").addClass("fadeOutUp");
+         $("#skills").removeClass("fadeOutDown");
+         $("#skills").addClass("fadeInUp");
+         $("#bg2").css("width","90%");
+     } else {
+       $(".hori-third").css("width", "0%");
+       $(".hori-third").css("width", "40%");
+       $("#about").removeClass("fadeOutUp");
+       $("#about").addClass("fadeInDown");
+       $("#skills").addClass("fadeOutDown");
+       $("#skills").removeClass("fadeInUp");
+       $("#bg2").css("width","0%");
+     }
+     st=0;
+
+   });
