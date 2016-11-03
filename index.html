@@ -17,8 +17,8 @@
 <body>
 
 	<header>
-		<div id="logo-div">
-			<img src="" class="">
+		<div id="logo-div" class="animated">
+			<img src="assets/img/r-logo.svg" class="">
 		</div>
 
 		<div id="menu" class="gridpos-fifty">
@@ -148,9 +148,22 @@
 if (current.attr('id') != target.attr('id'))
  {
 
-	 if (target.attr('id')!="about") { $(".hori-third").css("width", "0%"); }
-	 else  $(".hori-third").css("width", "40%");
+	 if (target.attr('id')!="about") { $(".hori-third").css("width", "0%");
+	 $("#logo-div").removeClass("fadeOut");
+ 		$("#logo-div").addClass("fadeIn");
+		$("html").css("background-size","0%");
+	}
+	 else { $(".hori-third").css("width", "40%");
+	 $("#logo-div").removeClass("fadeIn");
+ 	 $("#logo-div").addClass("fadeOut");
+	 $("html").css("background-size","30.1%");
 
+ }
+
+	 if (target.attr('id')!="skills") {
+		 $('#heading').css("color","black");
+			$("#bg2").css("width","0%");
+	 }
 
 
 	current.removeClass("fadeInUp");
@@ -163,8 +176,6 @@ if (current.attr('id') != target.attr('id'))
 	switch ( target.attr('id')) {
 		case "about":
 				$('#menu-line').css({"margin-left":"0%","width":"10%"});
-				$('#heading').css("color","black");
-				$("#bg2").css("width","0%");
 				$('#heading-text').typeIt({
 		 strings: 'Im Rohit',
 		 speed: 50,
@@ -183,8 +194,6 @@ if (current.attr('id') != target.attr('id'))
 		break;
 		case "exp":
 			$('#menu-line').css({"margin-left":"38%","width":"10%"});
-			$('#heading').css("color","black");
-			$("#bg2").css("width","0%");
 			$('#heading-text').typeIt({
 	 strings: 'Work & Play',
 	 speed: 50,
@@ -193,8 +202,6 @@ if (current.attr('id') != target.attr('id'))
 		break;
 		case "contact":
 			$('#menu-line').css({"margin-left":"54%","width":"16%"});
-			$('#heading').css("color","black");
-			$("#bg2").css("width","0%");
 			$('#heading-text').typeIt({
 	 strings: 'Get in touch',
 	 speed: 50,

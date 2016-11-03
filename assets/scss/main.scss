@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Inconsolata|Noto+Serif');
 
-$primary_font: 'Inconsolata', monospace;
+$primary_font: 'Noto Serif', serif;
 $heading_font: 'Fredericka the Great', cursive;
 
 html,body{
@@ -22,6 +22,14 @@ html,body{
 
 html{
 	background: white;
+	background-image: url('../img/r-bg.png');
+	background-repeat: no-repeat;
+	background-size: 30.1%;
+	-webkit-transition: all .5s ease-in-out;
+			-moz-transition: all .5s ease-in-out;
+			-o-transition: all .5s ease-in-out;
+			-ms-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
 }
 
 header{
@@ -30,6 +38,12 @@ header{
 	position: relative;
 	height: 2em;
 	z-index: 2;
+	#logo-div{
+		display: inline-block;
+		position: fixed;
+		left: 10%;
+		opacity: 0;
+	}
 }
 section{
 	padding: 2em 0;

@@ -8,12 +8,20 @@ html, body {
   padding: 0;
   width: 100%;
   max-width: 1680px;
-  font-family: "Inconsolata", monospace;
+  font-family: "Noto Serif", serif;
   font-size: 1em;
   background: transparent; }
 
 html {
-  background: white; }
+  background: white;
+  background-image: url("../img/r-bg.png");
+  background-repeat: no-repeat;
+  background-size: 30.1%;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
 
 header {
   width: 100%;
@@ -21,6 +29,11 @@ header {
   position: relative;
   height: 2em;
   z-index: 2; }
+  header #logo-div {
+    display: inline-block;
+    position: fixed;
+    left: 10%;
+    opacity: 0; }
 
 section {
   padding: 2em 0;
