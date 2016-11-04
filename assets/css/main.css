@@ -29,20 +29,26 @@ html {
   -ms-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
 
-body {
-  max-width: 1680px; }
-
 header {
   width: 100%;
   margin: 6.250em 0 0 0;
   position: relative;
   height: 2em;
   z-index: 2; }
-  header #logo-div {
-    display: inline-block;
-    position: fixed;
-    left: 10%;
-    opacity: 0; }
+
+#logo-div {
+  display: inline-block;
+  position: fixed;
+  left: 10%;
+  opacity: 0; }
+  #logo-div img {
+    width: 35px; }
+
+#ham-div {
+  display: none;
+  position: fixed;
+  right: 10%;
+  opacity: 0; }
 
 section {
   padding: 2em 0;
@@ -62,7 +68,8 @@ a {
   font-weight: normal; }
 
 #menu {
-  position: fixed; }
+  position: fixed;
+  left: 50%; }
   #menu ul {
     list-style: none;
     padding: 0;
@@ -88,14 +95,14 @@ a {
 #bg {
   margin: 0 auto;
   width: 80%;
-  padding: 2.250em 4.250em;
+  padding: 2.250em 2.250em;
   background: transparent;
   min-height: 70vh; }
 
 #bg2 {
-  top: 20vh;
+  top: 200px;
   left: 5%;
-  height: 75%;
+  height: 70%;
   width: 0%;
   position: fixed;
   background: #3333FF;
@@ -114,6 +121,54 @@ a {
   -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
 
+#modal-menu {
+  opacity: 0;
+  top: 0;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: -5;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  #modal-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto; }
+    #modal-menu ul li {
+      font-size: 3em;
+      font-family: "Inconsolata", monospace;
+      margin: 1em 0;
+      font-weight: normal !important; }
+      #modal-menu ul li a {
+        color: black; }
+  #modal-menu #close-div {
+    position: relative;
+    left: 80%;
+    margin: 6.250em 0 0 0; }
+
+#menu-bar {
+  margin: 0 auto;
+  height: 5px;
+  width: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 15em;
+  background: cyan;
+  border: none;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+
 #main {
   margin: 0 auto;
   width: 100%;
@@ -124,7 +179,7 @@ a {
   height: 3em; }
   #heading span {
     font-family: "Fredericka the Great", cursive;
-    font-size: 48px;
+    font-size: 3.000em;
     position: fixed; }
 
 #about {
@@ -184,26 +239,29 @@ a {
 
 #contact {
   position: relative; }
-  #contact #contact-left {
-    width: 30%;
-    display: inline-block;
-    line-height: 2.20em; }
-    #contact #contact-left p {
-      font-size: 1.2em; }
-    #contact #contact-left hr {
-      height: 2px;
-      background: black; }
-  #contact #contact-right {
-    display: inline-block;
-    left: 50%;
-    border: 2.251em solid transparent;
-    position: absolute;
-    -moz-border-image: -moz-linear-gradient(top left, blue 0%, cyan 100%);
-    -webkit-border-image: -webkit-linear-gradient(top left, blue 0%, cyan 100%);
-    border-image: linear-gradient(to bottom right, blue 0%, cyan 100%);
-    top: -2.251em;
-    padding: 1em 21em 1em 0;
-    border-image-slice: 1; }
+
+#contact-left {
+  width: 30%;
+  display: inline-block;
+  line-height: 2.20em; }
+  #contact-left p {
+    font-size: 1.2em; }
+  #contact-left hr {
+    height: 2px;
+    background: black; }
+
+#contact-right {
+  display: inline-block;
+  width: 100%;
+  left: 50%;
+  border: 2.251em solid transparent;
+  position: absolute;
+  -moz-border-image: -moz-linear-gradient(top left, blue 0%, cyan 100%);
+  -webkit-border-image: -webkit-linear-gradient(top left, blue 0%, cyan 100%);
+  border-image: linear-gradient(to bottom right, blue 0%, cyan 100%);
+  top: -2.251em;
+  padding: 1em 21em 1em 0;
+  border-image-slice: 1; }
 
 #contact-list {
   list-style: none;
@@ -215,6 +273,9 @@ a {
     font-weight: normal !important; }
     #contact-list li a {
       color: blue; }
+
+#contact-icons {
+  display: none; }
 
 #projects-btn {
   padding: 3em 2em 1em 2em;
@@ -391,7 +452,6 @@ a {
   top: 0px;
   left: 0;
   right: 0;
-  max-width: 1680px;
   width: 100%;
   margin: 0px auto;
   font-size: 0;
@@ -459,5 +519,84 @@ a {
 
 .hide {
   display: none; }
+
+@media screen and (max-width: 980px) {
+  #logo-div img {
+    width: 30px; }
+
+  #menu {
+    left: 30%; } }
+@media screen and (max-width: 736px) {
+  body {
+    font-size: 0.8em; }
+
+  .hori-second, .hori-third {
+    top: 226px; }
+
+  .hori-first {
+    top: 197px; }
+
+  #bg2 {
+    top: 150px;
+    left: 0; } }
+@media screen and (max-width: 480px) {
+  #logo-div img {
+    width: 25px; }
+
+  #menu {
+    display: none; }
+
+  #ham-div {
+    display: inline-block; }
+
+  .hori-third {
+    display: none; }
+
+  #about p {
+    margin-left: 0; }
+
+  #bg2 {
+    height: 100%; }
+
+  #skills ul {
+    margin-left: 0;
+    padding-top: 3em; }
+    #skills ul li {
+      margin: 0.5em 0; }
+
+  .underline {
+    padding-bottom: 3px;
+    border-bottom: 3px #00ffff solid; }
+
+  #exp #work {
+    width: 100%;
+    text-align: left; }
+  #exp #play {
+    width: 100%;
+    margin-left: 0; }
+
+  #projects-btn a {
+    left: 0; }
+
+  #resume-btn a {
+    left: 0; }
+
+  #contact-right {
+    display: none; }
+
+  #contact-left {
+    width: 100%; }
+
+  #contact-icons {
+    display: block; }
+    #contact-icons ul {
+      padding: 3em 0 0 0;
+      margin: 0;
+      list-style: none; }
+      #contact-icons ul li {
+        display: inline-block;
+        vertical-align: middle; }
+      #contact-icons ul li:not(:last-child) {
+        width: 27%; } }
 
 /*# sourceMappingURL=main.css.map */

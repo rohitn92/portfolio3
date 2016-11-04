@@ -21,7 +21,7 @@
 			<img src="assets/img/r-logo.svg" class="">
 		</div>
 
-		<div id="menu" class="gridpos-fifty">
+		<div id="menu">
 			<ul>
 				<li> <a href="#about">About</a> </li>
 				<li> <a href="#skills">Skills</a> </li>
@@ -31,6 +31,11 @@
 				<hr id="menu-line" style="margin-left: 0%;">
 			</ul>
 		</div>
+
+		<div id="ham-div" class="animated fadeIn">
+			<img src="assets/img/ham.svg" class="">
+		</div>
+
 	</header>
 
 	<div id="bg2"></div>
@@ -111,16 +116,38 @@
 
 			<div id="contact-right">
 				<ul id="contact-list">
-					<li><a href=""><span class="underline">Email</span></a></li>
-					<li><a href=""><span class="underline">LinkedIn</span></a></li>
-					<li><a href=""><span class="underline">Behance</span></a></li>
-					<li><a href=""><span class="underline">Medium</span></a></li>
+					<li><a href=""><span class="">Email</span></a></li>
+					<li><a href=""><span class="">LinkedIn</span></a></li>
+					<li><a href=""><span class="">Behance</span></a></li>
+					<li><a href=""><span class="">Medium</span></a></li>
+				</ul>
+			</div>
+
+			<div id="contact-icons">
+				<ul>
+					<li><a href=""><img src="assets/img/email-icon.svg"></a></li>
+					<li><a href=""><img src="assets/img/linkedin-icon.svg"></a></li>
+					<li><a href=""><img src="assets/img/behance-icon.svg"></a></li>
+					<li><a href=""><img src="assets/img/medium-icon.svg"></a></li>
 				</ul>
 			</div>
 
 		</section>
 
 	</div>
+</div>
+
+<div id="modal-menu">
+	<div id="close-div" class="">
+		<img src="assets/img/close.svg" class="">
+	</div>
+	<ul>
+				<hr id="menu-bar">
+		<li> <a href="#about">About</a> </li>
+		<li> <a href="#skills">Skills</a> </li>
+		<li> <a href="#exp">Exp</a> </li>
+		<li> <a href="#contact">Contact</a> </li>
+	</ul>
 </div>
 
 	<span class="grid">
@@ -177,38 +204,47 @@ if (current.attr('id') != target.attr('id'))
 
 	switch ( target.attr('id')) {
 		case "about":
+		$('#menu-bar').css("top","15em");
 				$('#menu-line').css({"margin-left":"0%","width":"10%"});
 				$('#heading-text').typeIt({
-		 strings: 'Im Rohit',
+		 strings: 'Hi There',
 		 speed: 50,
 		 autoStart: false
 		 });
+		 $("#modal-menu").css({"opacity":"0","z-index":"-5"});
 			break;
 		case "skills":
+		$('#menu-bar').css("top","21em");
 				$('#menu-line').css({"margin-left":"18%","width":"14%"});
-				$("#bg2").css("width","90%");
+				if ($(window).width() < 768)	$("#bg2").css("width","100%");
+				else $("#bg2").css("width","90%");
 				$('#heading').css("color","white");
 				$('#heading-text').typeIt({
      strings: 'What I Do',
      speed: 50,
      autoStart: false
 });
+$("#modal-menu").css({"opacity":"0","z-index":"-5"});
 		break;
 		case "exp":
+		$('#menu-bar').css("top","27em");
 			$('#menu-line').css({"margin-left":"38%","width":"10%"});
 			$('#heading-text').typeIt({
 	 strings: 'Work & Play',
 	 speed: 50,
 	 autoStart: false
 	 });
+	 $("#modal-menu").css({"opacity":"0","z-index":"-5"});
 		break;
 		case "contact":
+		$('#menu-bar').css("top","33em");
 			$('#menu-line').css({"margin-left":"54%","width":"15%"});
 			$('#heading-text').typeIt({
 	 strings: 'Get in touch',
 	 speed: 50,
 	 autoStart: false
 	 });
+	 $("#modal-menu").css({"opacity":"0","z-index":"-5"});
 		break;
 		default:
 
@@ -222,7 +258,7 @@ if (current.attr('id') != target.attr('id'))
  $( document ).ready(function() {
 	 $(".hori-third").css("width", "40%");
 	 $('#heading-text').typeIt({
-strings: 'Im Rohit',
+strings: 'Hi there,',
 speed: 50,
 autoStart: false
 });
@@ -233,6 +269,18 @@ autoStart: false
         console.log("Page bottom reached!");
     }
  });
+
+ $("#ham-div").click(function(){
+
+	 $("#modal-menu").css({"opacity":"0.9","z-index":"5"});
+
+});
+
+$("#close-div").click(function(){
+
+	$("#modal-menu").css({"opacity":"0","z-index":"-5"});
+
+});
 
 </script>
 
