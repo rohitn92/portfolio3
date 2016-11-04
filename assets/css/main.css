@@ -12,6 +12,8 @@ html, body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: "Inconsolata", monospace;
   font-size: 1em;
   background: transparent; }
@@ -87,7 +89,8 @@ a {
   margin: 0 auto;
   width: 80%;
   padding: 2.250em 4.250em;
-  background: transparent; }
+  background: transparent;
+  min-height: 70vh; }
 
 #bg2 {
   top: 20vh;
@@ -179,18 +182,39 @@ a {
   #exp .work-place .position {
     font-size: 1em; }
 
-#contact #contact-left {
-  width: 30%;
-  display: inline-block;
-  line-height: 2.20em; }
-  #contact #contact-left p {
-    font-size: 1.2em; }
-  #contact #contact-left hr {
-    height: 2px;
-    background: black; }
-#contact #contact-right {
-  display: inline-block;
-  margin-left: 30%; }
+#contact {
+  position: relative; }
+  #contact #contact-left {
+    width: 30%;
+    display: inline-block;
+    line-height: 2.20em; }
+    #contact #contact-left p {
+      font-size: 1.2em; }
+    #contact #contact-left hr {
+      height: 2px;
+      background: black; }
+  #contact #contact-right {
+    display: inline-block;
+    left: 50%;
+    border: 2.251em solid transparent;
+    position: absolute;
+    -moz-border-image: -moz-linear-gradient(top left, blue 0%, cyan 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, blue 0%, cyan 100%);
+    border-image: linear-gradient(to bottom right, blue 0%, cyan 100%);
+    top: -2.251em;
+    padding: 1em 21em 1em 0;
+    border-image-slice: 1; }
+
+#contact-list {
+  list-style: none;
+  margin: 0; }
+  #contact-list li {
+    font-size: 2em;
+    font-family: "Noto Serif", serif;
+    margin: 1em 0;
+    font-weight: normal !important; }
+    #contact-list li a {
+      color: blue; }
 
 #projects-btn {
   padding: 3em 2em 1em 2em;
@@ -347,8 +371,7 @@ a {
   position: relative;
   padding-bottom: 5px;
   border-bottom: 5px #00ffff solid;
-  z-index: 1;
-  font-weight: bold; }
+  z-index: 1; }
 
 .underline::after {
   /*		background-color: #00ffff;
