@@ -582,6 +582,9 @@ a {
   .hori-third {
     display: none; }
 
+  #workbg {
+    display: none; }
+
   #about p {
     margin-left: 0; }
 
