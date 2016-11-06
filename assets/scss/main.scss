@@ -147,6 +147,12 @@
   				transition: all 1s ease-in-out;
   }
 
+  #penbg{
+    position: absolute;
+    bottom: -1%;
+    left: 5%;
+  }
+
 	#modal-menu{
 		opacity: 0;
     top: 0;
@@ -278,12 +284,13 @@ z-index: 1;
 
   #exp{
   	#work{
-      text-align: right;
-      width: 50.2%;
+      margin-left: 50%;
+
   	}
 
   	#play{
-  		margin-left: 50%;
+      text-align: right;
+      width: 50.2%;
   	}
 
   	.date{
@@ -300,8 +307,13 @@ z-index: 1;
   			font-size: 1em;
   		}
   	}
+  }
 
-
+  #workbg{
+    position: absolute;
+top: 50%;
+left: 10%;
+z-index: -1;
   }
 
   #contact{
@@ -682,12 +694,14 @@ z-index: 1;
 	}
 	#exp{
 		#work{
-			width: 100%;
-			text-align: left;
+      width: 100%;
+      margin-left: 0;
+
 		}
 		#play{
-			width: 100%;
-			margin-left: 0;
+
+      width: 100%;
+      text-align: left;
 		}
 	}
 

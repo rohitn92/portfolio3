@@ -121,6 +121,11 @@ a {
   -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
 
+#penbg {
+  position: absolute;
+  bottom: -1%;
+  left: 5%; }
+
 #modal-menu {
   opacity: 0;
   top: 0;
@@ -226,10 +231,10 @@ a {
       color: #00ffff; }
 
 #exp #work {
+  margin-left: 50%; }
+#exp #play {
   text-align: right;
   width: 50.2%; }
-#exp #play {
-  margin-left: 50%; }
 #exp .date {
   font-size: 0.8em; }
 #exp .work-place {
@@ -239,6 +244,12 @@ a {
     line-height: 2.20em; }
   #exp .work-place .position {
     font-size: 1em; }
+
+#workbg {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  z-index: -1; }
 
 #contact {
   position: relative; }
@@ -573,10 +584,10 @@ a {
 
   #exp #work {
     width: 100%;
-    text-align: left; }
+    margin-left: 0; }
   #exp #play {
     width: 100%;
-    margin-left: 0; }
+    text-align: left; }
 
   #projects-btn a {
     left: 0; }
