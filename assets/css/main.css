@@ -50,6 +50,9 @@ header {
   opacity: 0;
   z-index: 10; }
 
+#ham {
+  cursor: pointer; }
+
 section {
   padding: 2em 0;
   opacity: 0; }
@@ -79,6 +82,8 @@ a {
       display: inline-block;
       margin-right: 3vw;
       font-size: 1.125em; }
+    #menu ul .yellow:hover {
+      background: #00ff00; }
   #menu hr {
     height: 5px;
     width: 10%;
@@ -155,7 +160,8 @@ a {
   #modal-menu #close-div {
     position: relative;
     left: 80%;
-    margin: 6.250em 0 0 0; }
+    margin: 6.250em 0 0 0;
+    cursor: pointer; }
 
 #menu-bar {
   margin: 0 auto;
@@ -422,7 +428,12 @@ a {
 
 .yellow {
   background: yellow;
-  padding: 5px 0; }
+  padding: 5px 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
 
 .highlight {
   position: relative;
@@ -561,7 +572,12 @@ a {
     display: none; }
 
   #ham-div {
-    display: inline-block; }
+    display: flex;
+    align-items: center; }
+    #ham-div a {
+      padding: 1em; }
+    #ham-div .yellow:hover {
+      background: #00ff00; }
 
   .hori-third {
     display: none; }

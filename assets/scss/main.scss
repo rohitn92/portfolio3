@@ -65,6 +65,9 @@
     z-index: 10;
   }
 
+#ham{
+   cursor: pointer;
+}
 
   section{
   	padding: 2em 0;
@@ -103,6 +106,10 @@
   			margin-right: 3vw;
   			font-size: 1.125em;
   		}
+
+      .yellow:hover{
+        background: #00ff00;
+      }
   	}
 
   	hr{
@@ -189,6 +196,7 @@ margin: 0 auto;
 						position: relative;
 						left: 80%;
 						margin: 6.250em 0 0 0;
+             cursor: pointer; 
 					}
 	}
 
@@ -513,6 +521,11 @@ z-index: -1;
   .yellow{
   	background: yellow;
   	padding: 5px 0;
+    -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
   }
 
   .highlight{
@@ -672,7 +685,14 @@ z-index: -1;
   		display: none;
   	}
   	#ham-div{
-  		display: inline-block;
+      display: flex;
+    align-items: center;
+    a{
+      padding: 1em;
+    }
+    .yellow:hover{
+      background: #00ff00;
+    }
   	}
 
 		.hori-third {
