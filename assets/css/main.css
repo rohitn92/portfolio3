@@ -33,7 +33,6 @@ header {
   width: 100%;
   margin: 6.250em 0 0 0;
   position: relative;
-  height: 2em;
   z-index: 2; }
 
 #logo-div {
@@ -48,7 +47,8 @@ header {
   display: none;
   position: fixed;
   right: 10%;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 10; }
 
 section {
   padding: 2em 0;
@@ -69,6 +69,7 @@ a {
 
 #menu {
   position: fixed;
+  z-index: 3;
   left: 50%; }
   #menu ul {
     list-style: none;
@@ -95,7 +96,6 @@ a {
 #bg {
   margin: 0 auto;
   width: 80%;
-  padding: 2.250em 2.250em;
   background: transparent;
   min-height: 70vh; }
 
@@ -171,12 +171,16 @@ a {
 
 #main {
   margin: 0 auto;
-  width: 100%;
-  padding: 4.250em 0; }
+  width: 100%; }
 
 #heading {
   position: relative;
-  height: 3em; }
+  height: 3em;
+  position: relative;
+  height: 3em;
+  left: 10%;
+  padding-top: 8.5em;
+  z-index: 1; }
   #heading span {
     font-family: "Fredericka the Great", cursive;
     font-size: 3.000em;
@@ -203,8 +207,7 @@ a {
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
     -o-animation-delay: 2s;
-    -ms-animation-delay: 2s;
-    animation-delay: 2s; }
+    -ms-animation-delay: 2s; }
 
 #skills {
   position: relative;

@@ -35,7 +35,9 @@
 		<div id="ham-div" class="animated fadeIn">
 			<img src="assets/img/ham.svg" class="">
 		</div>
-
+		<div id="heading" class="animated">
+			<span id="heading-text"> Hi there,</span>
+		</div>
 	</header>
 
 	<div id="bg2"></div>
@@ -44,9 +46,7 @@
 
 		<div id="hello"><h1></h1></div>
 
-		<div id="heading">
-			<span id="heading-text"> Hi there,</span>
-		</div>
+
 
 		<section id="about" class="animated fadeInUp">
 			<p > I’m Rohit, a <span class="yellow">Product Designer</span> and <span class="yellow">UI Developer</span>, currently based in Bangalore. I love learning new things and building stuff that connects <span class="highlight">Art</span> with <span class="highlight">Technology</span>. I also write about my journey from Engineering to Design on my publication, <span class="underline">10to24.</span>  </p>
@@ -176,6 +176,10 @@
 
 if (current.attr('id') != target.attr('id'))
  {
+	 if ($("#heading").css("opacity")==0){
+		 $("#heading").removeClass("fadeOut");
+		 $("#heading").addClass("fadeIn");
+	 }
 
 	 if (target.attr('id')!="about") { $(".hori-third").css("width", "0%");
 	 $("#logo-div").removeClass("fadeOut");
@@ -265,8 +269,13 @@ autoStart: false
  });
 
  $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() > $(document).height()) {
-        console.log("Page bottom reached!");
+    if($(window).scrollTop()> 0) {
+				$("#heading").removeClass("fadeIn");
+				$("#heading").addClass("fadeOut");
+    }
+ if($(window).scrollTop() == 0) {
+				$("#heading").removeClass("fadeOut");
+				$("#heading").addClass("fadeIn");
     }
  });
 
