@@ -38,6 +38,11 @@
 		</div>
 		<div id="heading" class="animated">
 			<span id="heading-text"> Hi there,</span>
+			<div id="mobile-arrow-div">
+				<a href="#" id="up"><img src="assets/img/up.png" class="animated fadeInDown"></a>
+				<a href="#skills" id="down"><img src="assets/img/down.png" class="animated fadeInDown"></a>
+			</div>
+
 		</div>
 	</header>
 
@@ -50,7 +55,9 @@
 	<div id="bg">
 	<div id="main">
 
-		<div id="hello"><h1></h1></div>
+		<div id="hello">
+			<h1></h1>
+		</div>
 
 
 
@@ -197,7 +204,7 @@ if (current != target)
 		$("#heading").addClass("fadeIn");
 	}
 
-	if (target!="about") { $(".hori-third").css("width", "0%");
+	if (target!="#about") { $(".hori-third").css("width", "0%");
 	$("#logo-div").removeClass("fadeOut");
 	 $("#logo-div").addClass("fadeIn");
 	 $("html").css("background-size","0%");
@@ -221,7 +228,6 @@ if (current != target)
 
  $(target).removeClass("fadeOutUp");
  $(target).addClass("fadeInUp");
-
  switch ( target) {
 	 case "#about":
 	 $('#menu-bar').css("top","15em");
@@ -232,7 +238,14 @@ if (current != target)
 		autoStart: false
 		});
 		$("#modal-menu").css({"opacity":"0","z-index":"-5"});
+setTimeout(function(){
+		$("#down").prop("href","#skills");
+		$("#down").css("opacity","1");
+		$("#up").prop("href","#");
+		$("#up").css("opacity","0");
+},1000);
 		 break;
+
 	 case "#skills":
 	 $('#menu-bar').css("top","21em");
 			 $('#menu-line').css({"margin-left":"18%","width":"14%"});
@@ -245,7 +258,14 @@ if (current != target)
 		autoStart: false
 });
 $("#modal-menu").css({"opacity":"0","z-index":"-5"});
+setTimeout(function(){
+$("#down").prop("href","#exp");
+$("#down").css("opacity","1");
+$("#up").prop("href","#about");
+$("#up").css("opacity","1");
+},1000);
 	 break;
+
 	 case "#exp":
 	 $('#menu-bar').css("top","27em");
 		 $('#menu-line').css({"margin-left":"38%","width":"10%"});
@@ -255,7 +275,14 @@ $("#modal-menu").css({"opacity":"0","z-index":"-5"});
 	autoStart: false
 	});
 	$("#modal-menu").css({"opacity":"0","z-index":"-5"});
+	setTimeout(function(){
+	$("#down").prop("href","#contact");
+	$("#down").css("opacity","1");
+	$("#up").prop("href","#skills");
+	$("#up").css("opacity","1");
+},1000);
 	 break;
+	 
 	 case "#contact":
 	 $('#menu-bar').css("top","33em");
 		 $('#menu-line').css({"margin-left":"54%","width":"15%"});
@@ -265,6 +292,12 @@ $("#modal-menu").css({"opacity":"0","z-index":"-5"});
 	autoStart: false
 	});
 	$("#modal-menu").css({"opacity":"0","z-index":"-5"});
+	setTimeout(function(){
+	$("#down").prop("href","#");
+	$("#down").css("opacity","0");
+	$("#up").prop("href","#exp");
+	$("#up").css("opacity","1");
+},1000);
 	 break;
 	 default:
 
@@ -283,6 +316,10 @@ autoStart: false
 
 if (window.location.hash != "#about" && window.location.hash!=""){
 	navigateTo(window.location.hash);
+}
+else{
+	$("#down").prop("href","#skills");
+	$("#down").css("opacity","1");
 }
 
  });

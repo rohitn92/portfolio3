@@ -192,10 +192,11 @@ a {
   left: 10%;
   padding-top: 8.5em;
   z-index: 1; }
-  #heading span {
-    font-family: "Fredericka the Great", cursive;
-    font-size: 3.000em;
-    position: fixed; }
+
+#heading-text {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 3.000em;
+  position: fixed; }
 
 #about {
   position: relative;
@@ -211,7 +212,8 @@ a {
 
 #arrow-div {
   text-align: center;
-  padding: 3em 0 0 0; }
+  padding: 3em 0 0 0;
+  display: none; }
   #arrow-div img {
     opacity: 0;
     animation-delay: 2s;
@@ -219,6 +221,25 @@ a {
     -moz-animation-delay: 2s;
     -o-animation-delay: 2s;
     -ms-animation-delay: 2s; }
+
+#mobile-arrow-div {
+  text-align: center;
+  padding: 0;
+  position: fixed;
+  right: 10%;
+  display: none; }
+  #mobile-arrow-div img {
+    width: 3em;
+    opacity: 0;
+    padding: 0.5em 0 0 1em; }
+
+#up, #down {
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
 
 #skills {
   position: relative;
@@ -630,6 +651,18 @@ a {
         display: inline-block;
         vertical-align: middle; }
       #contact-icons ul li:not(:last-child) {
-        width: 27%; } }
+        width: 27%; }
+
+  #mobile-arrow-div {
+    display: inline-block; }
+
+  #heading-text {
+    font-size: 2em; }
+
+  .hori-second, .hori-third {
+    top: 214px; }
+
+  .hori-first {
+    top: 194px; } }
 
 /*# sourceMappingURL=main.css.map */
