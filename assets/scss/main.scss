@@ -557,6 +557,7 @@ z-index: -1;
   font-weight: bold;
   }
 
+
   .highlight::after{
   	background-color: #00ffff;
       bottom: 0;
@@ -576,6 +577,20 @@ z-index: -1;
   	padding-bottom: 5px;
   	border-bottom: 5px #00ffff solid;
   z-index: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+  }
+
+  .underline:hover{
+    border-color: #00ff00;
+    -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
   }
 
   .underline::after{
