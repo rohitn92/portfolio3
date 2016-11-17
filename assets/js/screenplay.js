@@ -143,10 +143,14 @@ else{
     if($(window).scrollTop()> 0) {
 				$("#heading").removeClass("fadeIn");
 				$("#heading").addClass("fadeOut");
+				$("#menu").removeClass("fadeIn");
+				$("#menu").addClass("fadeOut");
     }
  if($(window).scrollTop() == 0) {
 				$("#heading").removeClass("fadeOut");
 				$("#heading").addClass("fadeIn");
+				$("#menu").removeClass("fadeOut");
+				$("#menu").addClass("fadeIn");
     }
  });
 

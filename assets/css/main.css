@@ -245,13 +245,20 @@ a {
   position: relative;
   padding: 0;
   line-height: 1.625em; }
+  #skills a {
+    color: white; }
   #skills .underline {
     border-color: yellow; }
+    #skills .underline:hover {
+      border-color: #00ff00; }
   #skills ul {
     padding: 0 0 0 0.9em;
     margin: 0;
     margin-left: 50%;
     font-size: 1em; }
+    #skills ul li {
+      padding: 0.1em 0;
+      line-height: 2em; }
     #skills ul li:nth-child(odd) {
       color: white; }
     #skills ul li:nth-child(even) {
